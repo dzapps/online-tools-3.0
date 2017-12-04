@@ -12,28 +12,9 @@
 
   $(entry).each(function(){
     // Column names are name, age, etc.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	  
+	  
+	  
     $('.results').prepend('<li class="card  '+this.gsx$category.$t+' '+this.gsx$usage.$t+'"> <a href="'+this.gsx$url.$t+'">'+'<img class="favico"   src="http://favicon.yandex.net/favicon/'+this.gsx$url.$t+'"><h2>'+this.gsx$title.$t+'</h2><p>'+this.gsx$descreption.$t+'</p>'+'<div class="grade">'+this.gsx$grade.$t+'</div>'+'</a></li>');
   });
 
