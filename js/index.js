@@ -3,7 +3,7 @@
 // ID of the Google Spreadsheet
  var spreadsheetID = "1P9eq5Mco0cg7h5DZRaxNt45o5r5TS-7NJlqOKXJbG1c";
 
- // Make sure it is public or set to Anyone with link can view 
+ // Make sure it is public or set to Anyone with link can view
  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
  $.getJSON(url, function(data) {
@@ -12,9 +12,7 @@
 
   $(entry).each(function(){
     // Column names are name, age, etc.
-	  
-	  
-	  
+
     $('.results').prepend('<li class="card  '+this.gsx$category.$t+' '+this.gsx$usage.$t+'"> <a href="'+this.gsx$url.$t+'">'+'<img class="favico"   src="http://favicon.yandex.net/favicon/'+this.gsx$url.$t+'"><h2>'+this.gsx$title.$t+'</h2><p>'+this.gsx$descreption.$t+'</p>'+'<div class="grade">'+this.gsx$grade.$t+'</div>'+'</a></li>');
   });
 
@@ -22,7 +20,7 @@
 
 // external js: isotope.pkgd.js
 $( document ).ajaxComplete(function() {
-  
+
 // Or, hide them
 $("img").error(function() {
   $(this).hide();
@@ -36,9 +34,9 @@ $('.header .button').on('click', function() { $('.header .button').toggleClass('
 // quick search regex
 var qsRegex;
 var buttonFilter;
-//favico  
+//favico
 
-  
+
 // init Isotope
 
 var $grid = $('#list').isotope({
@@ -71,7 +69,7 @@ $('.button-group').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checked');
   });
 });
-   //todo  
+   //todo
 $('.quicksearch').keyup(function() {
   $('.filters p button').addClass('typing').delay(1000).queue(function(next){
     $(this).removeClass("typing");
@@ -116,7 +114,7 @@ function insertAfter(newElement,targetElement) {
   }
 }
 
-function faviconize() { 
+function faviconize() {
   if (!document.getElementsByTagName) return false;
   if (!document.createElement) return false;
   var links = document.getElementsByTagName("a");
